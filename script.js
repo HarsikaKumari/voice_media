@@ -1,0 +1,1 @@
+var sound = new Audio("/assets/sounds/mouseClick.wav");
