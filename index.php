@@ -4,120 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topic media</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
-
-        #head {
-            text-align: center;
-        }
-
-        #nav {
-            padding: 0px 20px;
-            background-color: blue;
-            display: flex;
-            justify-content: right;
-        }
-
-        #searchBox {
-            margin: 10px 0px;
-            background-color: white;
-            padding: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-        }
-
-        #searchBtn {
-            padding: 10px 20px;
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 8px #999;
-            margin: 2px 0px;
-            border: none;
-            background-color: rgb(50, 219, 228);
-        }
-
-        #searchBtn:hover {
-            background-color: aqua
-        }
-
-        #searchBtn:active {
-            background-color: aqua;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-
-        #topic {
-            text-align: center;
-            background-color: blue;
-            background: linear-gradient(blue, black);
-            color: white;
-            padding: 20px;
-        }
-
-        #message {
-            text-align: center;
-            color: white;
-            background-color: blue;
-            padding: 10px;
-        }
-
-        .dialogueBox {
-            background-color: white;
-            border-radius: 15px 0px;
-            color: black;
-            margin: 20px 0px;
-        }
-
-        .dialogueImg {
-            position: relative;
-            bottom: 0px;
-            left: 2px;
-        }
-    </style>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
+    <h2 class="text-light">Site Theme: Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+    <?php
+    include("sideBar.php");
+    ?>
 
-    <div id="topic">
-        <h4>
-            Topic: A voice to link your Subjects through social networking
-        </h4>
-    </div>
-    <div id="message">
-        <div class="dialogueBox">
-            <h3>1. At the very top of the topic
-                output squares, Place banner as
-                shown, reading: One-Liner
-                Messaging.</h3>
-            <a href="#"> Visit: Yes, </a>
-            <span>Name: lorem, App: Buy, Lorem: ipsum dolor sit amet consectetur adipisicing elit. Eaque et asperiores magni! </span> <br>
-            <a href="https://github.com/HarsikaKumari">https://github.com/HarsikaKumari</a>
-            <!-- <img class="dialogueImg" src="./assets/images/thumbsUp.png" alt="Like">
-            <img class="dialogueImg" src="./assets/images/thumbsDown.png" alt="Like">
-            <img class="dialogueImg" src="./assets/images/share.png" alt="Like"> -->
-        </div>
-        <div class="dialogueBox">
-            <h3>1. At the very top of the topic
-                output squares, Place banner as
-                shown, reading: One-Liner
-                Messaging.</h3>
-            <a href="#"> Visit: Yes, </a>
-            <span>Name: lorem, App: Buy, Lorem: ipsum dolor sit amet consectetur adipisicing elit. Eaque et asperiores magni! </span> <br>
-            <a href="https://github.com/HarsikaKumari">https://github.com/HarsikaKumari</a>
+    <div id="mainBox">
+        <img src="./assets/images/hands.jpg" alt="">
+
+        <div id="accountBar">
+            <h3>My account >></h3> <br>
+            <h3>UserName: Larry111</h3> <br>
+            <h3>VIEW CERTIFICATE</h3> <br>
+            <h3>MAKE A TOPIC</h3> <br>
+            <h3>UPDATE PROFILE</h3> <br>
+            <h3>CALL SITE MGR.</h3> <br>
+            <h3>LOGOUT</h3>
         </div>
     </div>
-    <script>
-        var sound = new Audio("/assets/sounds/mouseClick.wav");
-    </script>
+    <div id="SearchBar">
+        <div id="searchBox">
+            <h1>
+                Search:
+            </h1>
+            <select name="other" id="other">
+                <option value="Other">Other</option>
+                <option value="hello">Hello</option>
+                <option value="hello2">Hello2</option>
+            </select>
+            <h1> OR </h1>
+            <input type="text" placeholder="Domain">
+            <button id="searchBtn" onclick="sound.play()"> Search </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <aside class="left-sidebar">
+                <section class="top-stories">
+                    <div class="top-stories-header">
+                        <h2>Top Stories</h2>
+                    </div>
+                    <div class="story-content">
+                        <p>Our 21st century objective is to glorify God at Romans 15:6 on a day named Preach1 Day</p>
+                        <a href="#">About Us</a>
+                        <p>The divine message for a Preach1 Foundation came in January 2000. The ministry went public January 1, 2010.</p>
+                    </div>
+                </section>
+
+
+            </aside>
+
+            <section class="results">
+                <?php
+                include("index.php");
+                ?>
+            </section>
+        </main>
+    </div>
+
+</html>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
